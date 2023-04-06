@@ -10,7 +10,7 @@ export const App = () => {
   return (
     <NextUIProvider theme={nextTheme}>
       <CssBaseline />
-      <Suspense fallback={<Loader />}>
+      <Suspense fallback={null}>
         <HomeView />
       </Suspense>
     </NextUIProvider>
