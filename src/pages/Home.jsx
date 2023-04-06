@@ -1,52 +1,63 @@
 import { Avatar, Container, Grid, Text } from "@nextui-org/react";
 import ProfilePicture from "../assets/profile_picture.png";
 import { SquareIcon } from "../components/SquareIcon";
+import Wave from "../components/Wave";
 import { LINK_ICONS } from "../mock/icons";
 
 export default function Home() {
   return (
-    <Container css={{ height: "100vh", paddingInline: "$2" }}>
-      <Grid.Container justify='center' css={{ paddingTop: "20vh" }}>
-        <Grid
-          xs={12}
-          css={{ textAlign: "center", paddingBottom: "$3" }}
-          justify='center'>
-          <Avatar
-            src={ProfilePicture}
-            css={{ size: "$24" }}
-            color='gradient'
-            bordered
-            loading='eager'
-          />
-        </Grid>
-        <Container css={{ textAlign: "center" }}>
-          <Text weight={"black"} size={"$lg"}>
-            Mauro Titanio
-          </Text>
-          <Text size={"$sm"}>Front-end developer</Text>
-        </Container>
-        <Grid xs={12} justify='center'>
-          {LINK_ICONS.map((icon) => (
-            <Grid css={{ padding: "$5" }}>
-              <SquareIcon
-                icon={icon.icon}
-                message={icon.message}
-                link={icon.link}
-              />
-            </Grid>
-          ))}
-        </Grid>
-        <Text
-          size={"$sm"}
+    <>
+      <div
+        style={{
+          height: "100vh",
+          width: "100%",
+          overflow: "hidden",
+          margin: 0,
+          padding: 0,
+        }}>
+        <Grid.Container
+          justify='center'
+          alignContent='start'
           css={{
-            position: "absolute",
-            top: "88%",
-            maxWidth: "90%",
-            textAlign: "center",
+            paddingTop: "20vh",
+            position: "relative",
+            outline: "red 1ps solid",
           }}>
-          Actually working as a solution assistant in NTT Data Spain.
-        </Text>
-      </Grid.Container>
-    </Container>
+          <Grid
+            xs={12}
+            css={{ textAlign: "center", paddingBottom: "$3" }}
+            justify='center'>
+            <Avatar
+              src={ProfilePicture}
+              css={{ size: "$28" }}
+              color='gradient'
+              bordered
+              loading='eager'
+            />
+          </Grid>
+          <Grid css={{ textAlign: "center", marginBottom: "$2" }}>
+            <Text weight={"black"} size={"$xl"}>
+              Mauro Titanio
+            </Text>
+            <Text size={"$sm"}>Front-end developer</Text>
+            <Text size={"$xs"}>
+              Actually working as a solution analyst in NTT Data Spain.
+            </Text>
+          </Grid>
+          <Grid xs={12} justify='center'>
+            {LINK_ICONS.map((icon) => (
+              <Grid css={{ padding: "$6" }}>
+                <SquareIcon
+                  icon={icon.icon}
+                  message={icon.message}
+                  link={icon.link}
+                />
+              </Grid>
+            ))}
+          </Grid>
+        </Grid.Container>
+        <Wave style={{ transform: "translateY(-80px)" }} />
+      </div>
+    </>
   );
 }

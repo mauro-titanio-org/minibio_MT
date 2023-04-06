@@ -19,10 +19,10 @@ export const SquareIcon = ({ icon, message, link }) => {
         onTap={handleTap}>
         <Avatar
           css={{ cursor: "pointer" }}
-          icon={icon({ size: 16, color: "white" })}
+          icon={icon({ size: 20, color: "white" })}
           // css={{ size: "$24" }}
           // color='gradient'
-          size={"sm"}
+          size={"md"}
           zoomed
           squared
           bordered
