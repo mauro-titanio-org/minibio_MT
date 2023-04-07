@@ -1,7 +1,7 @@
 import { Avatar, Container, Grid, Text } from "@nextui-org/react";
 import ProfilePicture from "../assets/profile_picture.png";
 import { SquareIcon } from "../components/SquareIcon";
-import Wave from "../components/Wave";
+import Wave from "../components/Wave.svg";
 import { LINK_ICONS } from "../mock/icons";
 
 export default function Home() {
@@ -9,11 +9,16 @@ export default function Home() {
     <>
       <div
         style={{
-          height: "100vh",
+          height: "100svh",
           width: "100%",
           overflow: "hidden",
           margin: 0,
           padding: 0,
+          background: "rgb(2,0,36)",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "bottom",
+          backgroundSize: "contain",
+          backgroundImage: `url(${Wave}), linear-gradient(0deg, rgba(2,0,36,1) 23%, rgba(0,212,215,0.1) 100%)`,
         }}>
         <Grid.Container
           justify='center'
@@ -21,7 +26,6 @@ export default function Home() {
           css={{
             paddingTop: "20vh",
             position: "relative",
-            outline: "red 1ps solid",
           }}>
           <Grid
             xs={12}
@@ -56,7 +60,9 @@ export default function Home() {
             ))}
           </Grid>
         </Grid.Container>
-        <Wave style={{ transform: "translateY(-80px)" }} />
+        {/* <Wave
+          style={{ transform: "translateY(-80px)", outline: "1px solid red" }}
+        /> */}
       </div>
     </>
   );
