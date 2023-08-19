@@ -9,8 +9,12 @@ export const SquareIcon = ({ icon, message, link }) => {
     <Tooltip
       content={message}
       placement={"bottom"}
+      aria-roledescription='tooltip'
+      aria-label={message}
       isDisabled={window.innerWidth < 768}>
       <motion.div
+        aria-label={message}
+        aria-roledescription="'button"
         whileHover={{
           opacity: 0.4,
           transition: { duration: 0.2 },
@@ -20,8 +24,10 @@ export const SquareIcon = ({ icon, message, link }) => {
         <Avatar
           css={{ cursor: "pointer" }}
           icon={icon({ size: 20, color: "white" })}
-          // css={{ size: "$24" }}
-          // color='gradient'
+          aria-label={message}
+          aria-placeholder={message}
+          aria-valuetext={message}
+          alt={message}
           size={"md"}
           zoomed
           squared
