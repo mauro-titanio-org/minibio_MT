@@ -37,6 +37,7 @@ export default function Home() {
               color='gradient'
               bordered
               loading='eager'
+              alt='Mauro Titanio profile picture'
             />
           </Grid>
           <Grid css={{ textAlign: "center", marginBottom: "$2" }}>
@@ -50,7 +51,7 @@ export default function Home() {
           </Grid>
           <Grid xs={12} justify='center'>
             {LINK_ICONS.map((icon) => (
-              <Grid css={{ padding: "$6" }}>
+              <Grid key={icon.message} css={{ padding: "$6" }}>
                 <SquareIcon
                   icon={icon.icon}
                   message={icon.message}
