@@ -14,11 +14,11 @@ export default function Home() {
           overflow: "hidden",
           margin: 0,
           padding: 0,
-          background: "rgb(2,0,36)",
+          background: "rgb(2,2,20)",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "bottom",
           backgroundSize: "contain",
-          backgroundImage: `url(${Wave}), linear-gradient(0deg, rgba(2,0,36,1) 23%, rgba(0,212,215,0.1) 100%)`,
+         
         }}>
         <Grid.Container
           justify='center'
@@ -36,6 +36,7 @@ export default function Home() {
               css={{ size: "$28" }}
               color='gradient'
               bordered
+              radius='sm'
               loading='eager'
               alt='Mauro Titanio profile picture'
             />
@@ -46,7 +47,7 @@ export default function Home() {
             </Text>
             <Text size={"$sm"}>Front-end developer</Text>
             <Text size={"$xs"}>
-              Actually working as a solution analyst in NTT Data Spain.
+              Analyst @ NTT Data Spain.
             </Text>
           </Grid>
           <Grid xs={12} justify='center'>
